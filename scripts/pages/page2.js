@@ -19,7 +19,7 @@ const Page2 = extend(Page)(
  	  const wrapper = ActionWrapper(this._view, actionBarOptions.options);
  	  const title = new SMF.UI.Label({
  	    width:"80%",
- 	    height: "50px",
+ 	    height: "50dp",
  	    left: "10%",
  	    top: "50px",
  	    text: "Swipe Me !!!"
@@ -39,9 +39,9 @@ const Page2 = extend(Page)(
   
  	  const sliderDrawerTitle = new SMF.UI.Label({
  	    width:"80%",
- 	    height: "50px",
+ 	    height: "50dp",
  	    left: "10%",
- 	    top: "50px",
+ 	    top: "50dp",
  	    text: "SliderDrawer Menu"
  	  });
  	  

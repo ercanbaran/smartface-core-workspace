@@ -41,18 +41,18 @@ const Page1 = extend(Page)(
 			"Touch me!"
 		);
 		this.add(btn);
-		btn.viewProxy.set("top", 70);
+		btn.viewProxy.set("top", "70dp");
 
 		var btn2 = new CheckBoxButton(
 			"Touch me!"
 		);
-		btn2.viewProxy.set("top", 110);
+		btn2.viewProxy.set("top", "110dp");
 		this.add(btn2);
 
 		var btn3 = new CheckBoxButton(
 			"Touch me!"
 		);
-		btn3.viewProxy.set("top", 150);
+		btn3.viewProxy.set("top", "150dp");
 		this.add(btn3);
 		
 		navBar.showNext("page2");

@@ -22,31 +22,33 @@ const CheckBoxButton = extend(UIComponent)(
 		
 		this.checkedRect = new SMF.UI.Rectangle({
 			fillColor: "#000000",
-			width: 15,
-			height: 15,
-			left: 7.5,
-			top: 7.5,
+			width: "15dp",
+			height: "15dp",
+			left: "7.5dp",
+			top: "7.5dp",
 			alpha: 0
 		});
 		
 		this.checkedAreaRect = new SMF.UI.Rectangle({
 			fillColor: "#ffffff",
-			width: 30,
+			width: "30dp",
 			top: 0,
 			left: 0,
-		  borderWidth: "1px",
+		  borderWidth: "1dp",
       borderColor: "#305E75",
-			height: 30
+			height: "30dp"
 		});
 		
 		this.label = new SMF.UI.Label({
 			text: text,
 			top: 0,
-			left: 40,
-			height: 30
+			left: "40dp",
+			height: "30dp",
+			// if this propery is true then onTouch event of parent Container of this Label cannot be captured.
+			touchEnabled: false
 		});
 		
-		this.label.font.size = 26;
+		this.label.font.size = "26dp";
 		
 		this.add(this.label);
 		this.add(this.checkedAreaRect);
