@@ -1,5 +1,5 @@
-const Page					   = require("js-base/component/page");
-const extend				   = require("js-base/core/extend");
+const Page			   = require("js-base/component/page");
+const extend		   = require("js-base/core/extend");
 const UIComponent      = require("js-base/component/ui-component");
 const CheckBoxButton   = require("./component/checkbox");
 const NavBar           = require("./component/nav-bar");

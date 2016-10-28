@@ -1,5 +1,5 @@
-const Page			   = require("js-base/component/page");
-const extend		   = require("js-base/core/extend");
+const Page			       = require("js-base/component/page");
+const extend		       = require("js-base/core/extend");
 // const UIComponent      = require("js-base/component/ui-component");
 const NavBar           = require("./component/nav-bar");
 const actionBarOptions = require("./actionbar/page2.actionbar");
@@ -36,7 +36,7 @@ const Page2 = extend(Page)(
       onHide: function(){
       }
     });
-    
+  
  	  const sliderDrawerTitle = new SMF.UI.Label({
  	    width:"80%",
  	    height: "50px",

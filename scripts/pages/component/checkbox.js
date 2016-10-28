@@ -3,13 +3,18 @@ const UIComponent = require("js-base/component/ui-component");
 
 const CheckBoxButton = extend(UIComponent)(
 	function(_super, text){
-		_super(this, 
+		_super(
+			// current scope of component
+			this, 
+			// Component container properties
 			{
-				width: 150,
-				height: 30,
+				width: "150dp",
+				height: "30dp",
 				borderWidth: 1
 			},
+			// component unique name
 			"checkbox",
+			// initial state of component
 			{
 				checked: false
 			}
@@ -48,16 +53,18 @@ const CheckBoxButton = extend(UIComponent)(
 		this.add(this.checkedRect);
 		
 		var changeState = this._changeState.bind(this);
-		
+		// gets component events as stream sequences
 		this.getEventStream("onTouch")
 			.subscribe(function(e){
 				changeState(({checked: !e.state.checked}));
 			})
 	},
 	function(_proto){
+		// lifecycle state change event handler
     _proto.stateChangedHandlder = function(state){
 			this.checkedRect.alpha = state.checked? 1:0;
 		};
+		
 		_proto.changeButton = function(){
 		};
 	}
