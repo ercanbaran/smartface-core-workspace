@@ -12,3 +12,4 @@ plugin/iOS/*
 !plugin/iOS/README.md
 js-base
 .DS_Store
+node_modules

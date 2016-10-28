@@ -3,7 +3,8 @@ const UIComponent = require("js-base/component/ui-component");
 
 const CheckBoxButton = extend(UIComponent)(
 	function(_super, text){
-		_super(this, {
+		_super(this, 
+			{
 				width: 150,
 				height: 30,
 				borderWidth: 1
@@ -45,7 +46,9 @@ const CheckBoxButton = extend(UIComponent)(
 		this.add(this.label);
 		this.add(this.checkedAreaRect);
 		this.add(this.checkedRect);
+		
 		var changeState = this._changeState.bind(this);
+		
 		this.getEventStream("onTouch")
 			.subscribe(function(e){
 				changeState(({checked: !e.state.checked}));
@@ -55,7 +58,6 @@ const CheckBoxButton = extend(UIComponent)(
     _proto.stateChangedHandlder = function(state){
 			this.checkedRect.alpha = state.checked? 1:0;
 		};
-		
 		_proto.changeButton = function(){
 		};
 	}

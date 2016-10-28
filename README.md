@@ -27,7 +27,7 @@ Create cloud project on Smartface.io then input https://github.com/smartface/sma
 ## Installation
 Run on terminal
 
-``` ./install.sh ```
+``` . install.sh ```
 
 ## Using Js SDK
 for more [https://github.com/smartface/js-base](https://github.com/smartface/js-base)
