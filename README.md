@@ -21,6 +21,16 @@ end-to-end, fully in the cloud.
 Welcome to the world of mobility!
 Smartface Team.
 
+## Usage
+Create cloud project on Smartface.io then input https://github.com/smartface/smartface-core-workspace to repository field on new project dialog.
+
+## Installation
+Run on terminal
+
+``` . install.sh ```
+
+## Using Js SDK
+for more [https://github.com/smartface/js-base](https://github.com/smartface/js-base)
 
 ## Support & Documentation & Useful Links
 
