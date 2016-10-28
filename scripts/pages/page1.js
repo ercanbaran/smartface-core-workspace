@@ -1,10 +1,10 @@
-const Page					   = require("js-base/component/page");
-const extend				   = require("js-base/core/extend");
-const UIComponent      = require("js-base/component/ui-component");
-const CheckBoxButton   = require("./component/checkbox");
-const NavBar           = require("./component/nav-bar");
-const actionBarOptions = require("./actionbar/page1.actionbar");
-const ActionWrapper    = require("js-base/component/action-bar");
+const Page		= require("js-base/component/page");
+const extend		= require("js-base/core/extend");
+const UIComponent	= require("js-base/component/ui-component");
+const CheckBoxButton   	= require("./component/checkbox");
+const NavBar           	= require("./component/nav-bar");
+const actionBarOptions 	= require("./actionbar/page1.actionbar");
+const ActionWrapper    	= require("js-base/component/action-bar");
 
 const Page1 = extend(Page)(
 	//Page1 Constructor
