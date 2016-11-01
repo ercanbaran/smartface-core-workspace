@@ -1,10 +1,10 @@
-const Page			   = require("js-base/component/page");
-const extend		   = require("js-base/core/extend");
+const Page			       = require("js-base/component/page");
+const extend		       = require("js-base/core/extend");
 const UIComponent      = require("js-base/component/ui-component");
 const CheckBoxButton   = require("./component/checkbox");
 const NavBar           = require("./component/nav-bar");
 const actionBarOptions = require("./actionbar/page1.actionbar");
-const ActionWrapper    = require("js-base/component/action-bar");
+const ActionBarWrapper = require("js-base/component/action-bar");
 
 const Page1 = extend(Page)(
 	//Page1 Constructor
@@ -18,10 +18,10 @@ const Page1 = extend(Page)(
 		
 		alert("Hello World!!");
 		
- 	  const wrapper = ActionWrapper(this._view, actionBarOptions.options);
+ 	  const wrapper = ActionBarWrapper(this._view, actionBarOptions.options);
  	  
 		function onShow() {
-			// create actionbar events subscription
+			// create subscription to actionbar events 
 			actionBarOptions.eventCallback(function(e){
 				alert(e.type);
 			});
