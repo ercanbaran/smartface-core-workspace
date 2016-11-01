@@ -4,16 +4,16 @@ const Router = require("js-base/core/router");
 
 const createButton = function(page, left, text){
   return new SMF.UI.Label({
-        width: "20%",
-        height: "50dp",
-        left: left,
-        top: 0,
-        text: text,
-        onTouch: function(){
-          Router.go(page);
-        }
-      });
-}
+    width: "20%",
+    height: "50dp",
+    left: left,
+    top: 0,
+    text: text,
+    onTouch: function(){
+      Router.go(page);
+    }
+  });
+};
 
 const NavBar = extend(UIComponent)(
   // Constructor

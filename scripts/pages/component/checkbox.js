@@ -4,7 +4,7 @@ const UIComponent = require("js-base/component/ui-component");
 const CheckBoxButton = extend(UIComponent)(
 	function(_super, text){
 		_super(
-			// current scope of component
+			// for initializing super component as this scope
 			this, 
 			// Component container properties
 			{
