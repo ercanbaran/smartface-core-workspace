@@ -1,4 +1,4 @@
-/* globals lang */
+/* globals lang, initRequire*/
 
 include('i18n/i18n.js');
 include("node_modules/js-base/utils/require.js");
