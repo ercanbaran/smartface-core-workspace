@@ -2,7 +2,8 @@ const extend = require("js-base/core/extend");
 const UIComponent = require("js-base/component/ui-component");
 const Router = require("js-base/core/router");
 
-const createButton = function(page, left, text){
+const createButton = function(page, left, text, action){
+  action = action || "go";
   return new SMF.UI.Label({
     width: "20%",
     height: "50dp",
@@ -10,7 +11,7 @@ const createButton = function(page, left, text){
     top: 0,
     text: text,
     onTouch: function(){
-      Router.go(page);
+      Router[action](page);
     }
   });
 };
@@ -35,7 +36,7 @@ const NavBar = extend(UIComponent)(
     };
 
     _proto.showPrev = function(page) {
-      this.add(createButton(page, "2%", "Prev"));
+      this.add(createButton(page, "2%", "Prev", "back"));
     };
   }
 );
