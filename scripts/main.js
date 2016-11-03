@@ -1,6 +1,7 @@
 const Page1  = require("./pages/page1");
 const Page2  = require("./pages/page2");
 const Router = require("js-base/core/router");
+require("babel-polyfill/dist/polyfill.js")
 // require("./libs/js-base/index");
 
 Router.add(
