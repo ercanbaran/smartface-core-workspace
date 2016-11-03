@@ -1,5 +1,5 @@
-const Page			   = require("js-base/component/page");
-const extend		   = require("js-base/core/extend");
+const Page			       = require("js-base/component/page");
+const extend		       = require("js-base/core/extend");
 // const UIComponent      = require("js-base/component/ui-component");
 const NavBar           = require("./component/nav-bar");
 const actionBarOptions = require("./actionbar/page2.actionbar");
@@ -7,7 +7,7 @@ const ActionWrapper    = require("js-base/component/action-bar");
 const SliderDrawer     = require("js-base/component/slider-drawer");
 
 const Page2 = extend(Page)(
-	//Page1 Constructor
+	//Page2 Constructor
 	function(_super){
 
 		_super(this, {
@@ -19,7 +19,7 @@ const Page2 = extend(Page)(
  	  const wrapper = ActionWrapper(this._view, actionBarOptions.options);
  	  const title = new SMF.UI.Label({
  	    width:"80%",
- 	    height: "50px",
+ 	    height: "50dp",
  	    left: "10%",
  	    top: "50px",
  	    text: "Swipe Me !!!"
@@ -36,12 +36,12 @@ const Page2 = extend(Page)(
       onHide: function(){
       }
     });
-    
+  
  	  const sliderDrawerTitle = new SMF.UI.Label({
  	    width:"80%",
- 	    height: "50px",
+ 	    height: "50dp",
  	    left: "10%",
- 	    top: "50px",
+ 	    top: "50dp",
  	    text: "SliderDrawer Menu"
  	  });
  	  
@@ -50,6 +50,7 @@ const Page2 = extend(Page)(
  	  this.add(title);
     
 		function onShow() {
+			// subscribes actionbar events
 		  actionBarOptions.eventCallback(function(e){
 		    if(e.type == "menu")
   				sliderDrawer.toggle();
@@ -60,8 +61,7 @@ const Page2 = extend(Page)(
 		
 		function onClose(){
 			// unsubsribes from actionbar events
-			actionBarOptions.eventCallback(function(e){
-			});
+			actionBarOptions.eventCallback(null);
 		}
 
 		var navBar = new NavBar();
@@ -69,9 +69,9 @@ const Page2 = extend(Page)(
 
 		navBar.showPrev("page1");
 	},
-	//Page1 Public Methods
+	//Page2 Public Methods
 	function(_proto){
-		// injects routing data
+		// for injection of routing data
 		_proto.setRouteParams = function(){};
     _proto.changeStateHandlder = function(state){};
 	});

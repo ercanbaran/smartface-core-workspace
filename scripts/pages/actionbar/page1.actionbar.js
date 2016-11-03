@@ -8,20 +8,22 @@ const options = {
   , enabled: true
 };
 
+
 if(Device.deviceOS == "iOS") {
   options.ios = {
       rightBarButtonItems: []
     , leftBarButtonItems: [new SMF.UI.iOS.BarButtonItem({
         image : "Menu.png"
        , onSelected: function(){
-         eventCallback({type: "menu"})
+          console.log(eventCallback);
+          eventCallback({type: "menu"})
        }
     })]
     , translucent: false
     , titleView: {        
         type: SMF.UI.TitleViewType.IMAGE
-      , frame: [90, 5, 68.5, 39.5]
-      , image: "icon.png"
+      , frame: [100, 0, 44, 44]
+      , image: "Icon.png"
     }
   };
 } else {
@@ -29,7 +31,10 @@ if(Device.deviceOS == "iOS") {
       hideOnContentScroll: false
     , titleView: {
         type: SMF.UI.TitleViewType.IMAGE
-      , frame: [130.75, 0, 68.5, 39.5]
+      , left: 70
+      , width: 44
+      , height: 44
+      , top: 0
       , image: "icon.png"
     }  
     , overlay: false
