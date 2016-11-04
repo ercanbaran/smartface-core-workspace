@@ -13,7 +13,7 @@ if(Device.deviceOS == "iOS") {
   options.ios = {
       rightBarButtonItems: []
     , leftBarButtonItems: [new SMF.UI.iOS.BarButtonItem({
-        image : "Menu.png"
+        image : "menu.png"
        , onSelected: function(){
           console.log(eventCallback);
           eventCallback({type: "menu"})
@@ -23,7 +23,7 @@ if(Device.deviceOS == "iOS") {
     , titleView: {        
         type: SMF.UI.TitleViewType.IMAGE
       , frame: [100, 0, 44, 44]
-      , image: "Icon.png"
+      , image: "icon.png"
     }
   };
 } else {
@@ -38,7 +38,7 @@ if(Device.deviceOS == "iOS") {
       , image: "icon.png"
     }  
     , overlay: false
-    , homeAsUpIndicator: "Menu.png"
+    , homeAsUpIndicator: "menu.png"
     , displayShowHomeEnabled: true
     , alpha: 1
     , displayHomeAsUpEnabled: true
