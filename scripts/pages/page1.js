@@ -24,11 +24,11 @@ const Page1 = extend(Page)(
  	  
 		function onShow() {
 			// create subscription to actionbar events 
+			wrapper.reload();
+
 			actionBarOptions.eventCallback(function(e){
 				alert(e.type);
 			});
-			
-			wrapper.reload();
 		}
 		
 		function onClose(){

@@ -51,12 +51,12 @@ const Page2 = extend(Page)(
     
 		function onShow() {
 			// subscribes actionbar events
+			wrapper.reload();
 		  actionBarOptions.eventCallback(function(e){
 		    if(e.type == "menu")
   				sliderDrawer.toggle();
 			});
 
-			wrapper.reload();
 		}
 		
 		function onClose(){
