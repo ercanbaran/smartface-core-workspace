@@ -1,4 +1,3 @@
-const ActionWrapper = require("js-base/component/action-bar");
 const baseOptions = require("./page1.actionbar");
 
 
