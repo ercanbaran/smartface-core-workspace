@@ -14,7 +14,7 @@ const CheckBoxButton = extend(UIComponent)(
 				height: "30dp"
 			},
 			// component unique name
-			"checkbox",
+			"&container",
 			// initial state of component
 			{
 				checked: false
@@ -52,27 +52,21 @@ const CheckBoxButton = extend(UIComponent)(
 			touchEnabled: false
 		});
 		
-		this.elements = {
+		/*this.elements = {
 			".checkbox": this._view,
 			"&container": this._view,
 			"&label": this.label,
 			"&checkedAreaRect": this.checkedAreaRect,
 			"&checkedRect": this.checkedRect
-		};
+		};*/
 		
 		this.label.font.size = "26dp";
 		
-		this.add(this.label);
-		this.add(this.checkedAreaRect);
-		this.add(this.checkedRect);
+		this.add(this.label, "&label");
+		this.add(this.checkedAreaRect, "&checkedAreaRect");
+		this.add(this.checkedRect, "&checkedRect");
 		
 		var changeState = this._changeState.bind(this);
-		
-		this.updateStyles = function(className, key, value){
-			if(this.elements.hasOwnProperty(className)){
-				this.elements[className][key] = value;
-			}
-		};
 		
 		// gets component events as stream sequences
 		this.getEventStream("onTouch")
