@@ -4,7 +4,7 @@ const extend		       = require("js-base/core/extend");
 const NavBar           = require("./component/nav-bar");
 const actionBarOptions = require("./actionbar/page2.actionbar");
 const ActionWrapper    = require("js-base/component/action-bar");
-const SliderDrawer     = require("js-base/component/slider-drawer");
+const SliderDrawer     = require("./component/slider-drawer");
 
 const Page2 = extend(Page)(
 	//Page2 Constructor
@@ -51,12 +51,12 @@ const Page2 = extend(Page)(
     
 		function onShow() {
 			// subscribes actionbar events
+			wrapper.reload();
 		  actionBarOptions.eventCallback(function(e){
 		    if(e.type == "menu")
   				sliderDrawer.toggle();
 			});
 
-			wrapper.reload();
 		}
 		
 		function onClose(){
